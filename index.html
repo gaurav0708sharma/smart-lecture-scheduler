@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Lecture Scheduler</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-shape bg1"></div>
+  <div class="bg-shape bg2"></div>
+
+  <div class="container">
+    <header class="hero">
+      <h1>📘 Smart Lecture Scheduler</h1>
+      <p>
+        Automatically generate smart class timetables based on sections, teachers,
+        subjects, and day-wise lecture counts.
+      </p>
+    </header>
+
+    <section class="card form-card">
+      <h2>Scheduler Setup</h2>
+
+      <div class="grid">
+        <div class="field">
+          <label>Class Name</label>
+          <input type="text" id="className" placeholder="e.g. BCA 2nd Year" />
+        </div>
+
+        <div class="field">
+          <label>Sections (comma separated)</label>
+          <input type="text" id="sections" placeholder="e.g. A, B, C" />
+        </div>
+      </div>
+
+      <div class="days-card">
+        <h3>Day-wise Lecture Count</h3>
+        <div class="days-grid">
+          <div class="field">
+            <label>Monday</label>
+            <input type="number" id="mon" min="0" max="8" value="5" />
+          </div>
+          <div class="field">
+            <label>Tuesday</label>
+            <input type="number" id="tue" min="0" max="8" value="5" />
+          </div>
+          <div class="field">
+            <label>Wednesday</label>
+            <input type="number" id="wed" min="0" max="8" value="5" />
+          </div>
+          <div class="field">
+            <label>Thursday</label>
+            <input type="number" id="thu" min="0" max="8" value="5" />
+          </div>
+          <div class="field">
+            <label>Friday</label>
+            <input type="number" id="fri" min="0" max="8" value="5" />
+          </div>
+          <div class="field">
+            <label>Saturday</label>
+            <input type="number" id="sat" min="0" max="8" value="0" />
+          </div>
+        </div>
+      </div>
+
+      <div class="teacher-section">
+        <div class="teacher-header">
+          <h3>Teachers & Subjects</h3>
+          <button id="addTeacherBtn" class="btn secondary-btn">+ Add Teacher</button>
+        </div>
+
+        <div id="teacherList"></div>
+      </div>
+
+      <div class="action-row">
+        <button id="generateBtn" class="btn primary-btn">Generate Timetable</button>
+        <button id="sampleBtn" class="btn ghost-btn">Load Sample Data</button>
+        <button id="clearBtn" class="btn ghost-btn">Clear</button>
+      </div>
+    </section>
+
+    <section class="card result-card">
+      <div class="result-header">
+        <div class="result-top">
+          <div>
+            <h2>Generated Timetables</h2>
+            <p id="resultInfo">Fill the details and click "Generate Timetable".</p>
+          </div>
+          <div class="top-actions">
+            <button id="printBtn" class="btn print-btn hidden">🖨️ Print</button>
+            <button id="downloadBtn" class="btn download-btn hidden">⬇️ Download</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="output"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

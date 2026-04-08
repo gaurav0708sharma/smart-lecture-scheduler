@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bg: #0b1020;
+  --card: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #ffffff;
+  --muted: #cbd5e1;
+  --accent: #00e5ff;
+  --accent2: #8b5cf6;
+  --shadow: 0 12px 35px rgba(0, 229, 255, 0.12);
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #131a31 0%, #0b1020 45%, #070b16 100%);
+  color: var(--text);
+  padding: 30px 15px 50px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-shape {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.22;
+}
+
+.bg1 {
+  width: 260px;
+  height: 260px;
+  background: var(--accent);
+  top: 40px;
+  left: -80px;
+}
+
+.bg2 {
+  width: 320px;
+  height: 320px;
+  background: var(--accent2);
+  right: -100px;
+  top: 180px;
+}
+
+.container {
+  width: 95%;
+  max-width: 1350px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.form-card h2,
+.result-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.days-card {
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.days-card h3 {
+  margin-bottom: 14px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+.field input {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  outline: none;
+}
+
+.field input::placeholder {
+  color: #94a3b8;
+}
+
+.teacher-section {
+  margin-top: 10px;
+}
+
+.teacher-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.teacher-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr auto;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.teacher-row input {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  outline: none;
+}
+
+.teacher-row input::placeholder {
+  color: #94a3b8;
+}
+
+.remove-btn {
+  background: rgba(255, 107, 107, 0.15);
+  color: #ffb3b3;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  padding: 12px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.action-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, var(--accent), #4facfe);
+  color: #08111f;
+}
+
+.secondary-btn {
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.ghost-btn {
+  background: rgba(255,255,255,0.04);
+  color: var(--muted);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.print-btn {
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  color: #ffffff;
+}
+
+.download-btn {
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  color: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn:hover,
+.remove-btn:hover {
+  transform: translateY(-2px);
+}
+
+.result-header {
+  margin-bottom: 16px;
+}
+
+.result-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.top-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.result-header p {
+  color: var(--muted);
+}
+
+.schedule-block {
+  margin-bottom: 28px;
+}
+
+.schedule-title {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  background: rgba(255,255,255,0.03);
+}
+
+th, td {
+  padding: 14px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+th {
+  background: rgba(0, 229, 255, 0.08);
+  color: #ffffff;
+}
+
+td {
+  color: var(--muted);
+}
+
+.slot {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subject {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.teacher {
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.free {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.error {
+  background: rgba(255, 107, 107, 0.12);
+  border: 1px solid rgba(255, 107, 107, 0.25);
+  color: #ffc7c7;
+  padding: 14px;
+  border-radius: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .teacher-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff;
+    color: #000000;
+    padding: 0;
+  }
+
+  .bg-shape,
+  .hero,
+  .form-card,
+  .top-actions {
+    display: none !important;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .result-card {
+    background: #ffffff;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .result-header p {
+    color: #000000;
+  }
+
+  .schedule-title {
+    color: #000000;
+  }
+
+  .table-wrap {
+    border: 1px solid #cccccc;
+  }
+
+  table {
+    min-width: 100%;
+    background: #ffffff;
+  }
+
+  th, td {
+    border: 1px solid #999999;
+    color: #000000;
+  }
+
+  th {
+    background: #f3f4f6 !important;
+    color: #000000;
+  }
+
+  .subject,
+  .teacher,
+  .free {
+    color: #000000 !important;
+  }
+}
